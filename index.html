@@ -44,7 +44,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 24px;
         }
 
         nav ul li a {
@@ -86,7 +86,7 @@
         .hero p {
             font-size: 18px;
             color: #4b5563;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .btn {
@@ -96,12 +96,20 @@
             padding: 12px 22px;
             border-radius: 8px;
             text-decoration: none;
-            margin: 6px;
+            margin: 5px;
             font-weight: bold;
         }
 
         .btn:hover {
             background: #1d4ed8;
+        }
+
+        .btn-dark {
+            background: #111827;
+        }
+
+        .btn-dark:hover {
+            background: #374151;
         }
 
         .section-title {
@@ -136,33 +144,52 @@
             font-weight: bold;
         }
 
+        .learning {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .learning span {
+            display: inline-block;
+            background: #eef2ff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .projects-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            gap: 30px;
+        }
+
         .project-card {
             background: white;
-            max-width: 950px;
-            margin: auto;
-            padding: 35px;
+            padding: 32px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .project-card h3 {
             color: #2563eb;
-            font-size: 27px;
-            margin-bottom: 15px;
+            font-size: 25px;
+            margin-bottom: 12px;
         }
 
-        .project-card h4 {
-            margin-top: 25px;
-            margin-bottom: 10px;
+        .project-card p {
+            color: #4b5563;
+            margin-bottom: 12px;
         }
 
         .project-card ul {
             padding-left: 25px;
-            margin-top: 10px;
+            margin: 15px 0;
         }
 
         .project-card li {
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
         .education {
@@ -180,7 +207,7 @@
         }
 
         .contact p {
-            margin: 12px 0;
+            margin: 15px 0;
         }
 
         .contact a {
@@ -196,6 +223,7 @@
         }
 
         @media (max-width: 700px) {
+
             nav {
                 flex-direction: column;
                 gap: 15px;
@@ -225,7 +253,9 @@
 <body>
 
 <header>
+
     <nav>
+
         <div class="logo">Suguna</div>
 
         <ul>
@@ -236,7 +266,9 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
+
 </header>
 
 
@@ -252,13 +284,25 @@
 
         <p>
             I am a Computer Science and Engineering student interested in
-            web development, backend development, databases, cybersecurity
+            Full-Stack Web Development, Backend Development, databases
             and modern web technologies.
         </p>
 
-        <a href="#projects" class="btn">View My Project</a>
+        <a href="#projects" class="btn">
+            View Projects
+        </a>
 
-        <a href="#contact" class="btn">Contact Me</a>
+        <a href="https://github.com/suguna-123-hub"
+           class="btn btn-dark"
+           target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/sivakoti-suguna-4b107241b/"
+           class="btn"
+           target="_blank">
+            LinkedIn
+        </a>
 
     </div>
 
@@ -274,25 +318,24 @@
     <div class="about">
 
         <p>
-            I am currently pursuing my B.Tech in Computer Science and
-            Engineering and I am interested in Full-Stack Web Development.
+            I am pursuing my B.Tech in Computer Science and Engineering
+            and I am interested in Full-Stack Web Development.
         </p>
 
         <br>
 
         <p>
             I have hands-on experience in backend development through
-            the V SHOP Multi-Tenant E-Commerce Platform. I worked with
-            Node.js, Express.js, MongoDB, Mongoose, JWT authentication
-            and bcryptjs.
+            the V SHOP Multi-Tenant E-Commerce Platform, where I worked
+            with Node.js, Express.js, MongoDB and REST APIs.
         </p>
 
         <br>
 
         <p>
-            I am continuously improving my web development skills and
-            learning new technologies through academic projects,
-            practical work and internships.
+            I enjoy learning new technologies and building practical
+            projects. I am currently improving my frontend, backend and
+            web development skills.
         </p>
 
     </div>
@@ -322,84 +365,155 @@
 
         <div class="skill">MongoDB</div>
 
-        <div class="skill">Mongoose</div>
-
-        <div class="skill">JWT Authentication</div>
-
-        <div class="skill">bcryptjs</div>
-
-        <div class="skill">Python</div>
-
         <div class="skill">Git & GitHub</div>
 
         <div class="skill">Postman</div>
 
-        <div class="skill">VS Code</div>
+    </div>
+
+    <div class="learning">
+
+        <span>Python — Currently Learning</span>
 
     </div>
 
 </section>
 
 
-<!-- PROJECT -->
+<!-- PROJECTS -->
 
 <section id="projects">
 
-    <h2 class="section-title">Project</h2>
+    <h2 class="section-title">Projects</h2>
 
-    <div class="project-card">
+    <div class="projects-container">
 
-        <h3>V SHOP – Multi-Tenant E-Commerce Platform</h3>
 
-        <p>
-            <strong>Role:</strong> Backend Developer
-        </p>
+        <!-- V SHOP -->
 
-        <p>
-            <strong>Technologies:</strong>
-            Node.js, Express.js, MongoDB, Mongoose,
-            JWT, bcryptjs and REST APIs
-        </p>
+        <div class="project-card">
 
-        <br>
+            <h3>
+                V SHOP – Multi-Tenant E-Commerce Platform
+            </h3>
 
-        <p>
-            V SHOP is a multi-tenant e-commerce platform developed
-            to provide an online shopping experience with user
-            authentication and product management.
-        </p>
+            <p>
+                <strong>Role:</strong> Backend Developer
+            </p>
 
-        <h4>My Contributions</h4>
+            <p>
+                <strong>Technologies:</strong>
+                Node.js, Express.js, MongoDB and REST APIs
+            </p>
 
-        <ul>
-            <li>Developed backend APIs using Node.js and Express.js.</li>
+            <p>
+                A multi-tenant e-commerce platform developed to provide
+                an online shopping experience with authentication,
+                product management and backend APIs.
+            </p>
 
-            <li>Connected the application with MongoDB Atlas.</li>
+            <ul>
 
-            <li>Implemented user registration and login APIs.</li>
+                <li>
+                    Developed backend APIs using Node.js and Express.js.
+                </li>
 
-            <li>Implemented JWT-based authentication.</li>
+                <li>
+                    Connected the application with MongoDB Atlas.
+                </li>
 
-            <li>Used bcryptjs for secure password hashing.</li>
+                <li>
+                    Developed authentication and user-related APIs.
+                </li>
 
-            <li>Created database models using Mongoose.</li>
+                <li>
+                    Created backend routes and controllers.
+                </li>
 
-            <li>Developed backend routes and controllers.</li>
+                <li>
+                    Tested APIs using Postman.
+                </li>
 
-            <li>Tested APIs using Postman.</li>
+                <li>
+                    Collaborated with team members during development.
+                </li>
 
-            <li>Used Git and GitHub for version control.</li>
-
-            <li>Collaborated with team members during development.</li>
-        </ul>
-
-        <div style="margin-top: 25px;">
+            </ul>
 
             <a
                 href="https://github.com/SAIHAR26/multi-tenant-ecommerce"
                 class="btn"
                 target="_blank">
-                View V SHOP on GitHub
+
+                View on GitHub
+
+            </a>
+
+        </div>
+
+
+        <!-- SKILL TO CAREER -->
+
+        <div class="project-card">
+
+            <h3>
+                Skill-to-Career Path Generator
+            </h3>
+
+            <p>
+                <strong>Type:</strong> Academic / Team Project
+            </p>
+
+            <p>
+                <strong>Technology:</strong> MERN Stack
+            </p>
+
+            <p>
+                A web application designed to help users explore
+                suitable career paths and generate personalized
+                career roadmaps based on their skills.
+            </p>
+
+            <a
+                href="https://github.com/LakshmiJahnavi37/Skill-to-Career-Path-Generator"
+                class="btn"
+                target="_blank">
+
+                View on GitHub
+
+            </a>
+
+        </div>
+
+
+        <!-- JAVA CAPSTONE -->
+
+        <div class="project-card">
+
+            <h3>
+                Java Capstone Project
+            </h3>
+
+            <p>
+                <strong>Type:</strong> Academic / Team Project
+            </p>
+
+            <p>
+                <strong>Technology:</strong> Java and MongoDB
+            </p>
+
+            <p>
+                A Java-based academic project demonstrating application
+                development and database connectivity using MongoDB.
+            </p>
+
+            <a
+                href="https://github.com/LakshmiJahnavi37/Java_CapeStone_Project"
+                class="btn"
+                target="_blank">
+
+                View on GitHub
+
             </a>
 
         </div>
@@ -415,39 +529,18 @@
 
     <h2 class="section-title">Education</h2>
 
-    <h3>B.Tech – Computer Science and Engineering</h3>
+    <h3>
+        B.Tech – Computer Science and Engineering
+    </h3>
 
-    <p>Expected Graduation: 2028</p>
+    <p>
+        Expected Graduation: 2028
+    </p>
 
     <p>
         Currently pursuing Bachelor of Technology in
         Computer Science and Engineering.
     </p>
-
-</section>
-
-
-<!-- AREAS OF INTEREST -->
-
-<section>
-
-    <h2 class="section-title">Areas of Interest</h2>
-
-    <div class="skills-container">
-
-        <div class="skill">Full-Stack Web Development</div>
-
-        <div class="skill">Backend Development</div>
-
-        <div class="skill">Frontend Development</div>
-
-        <div class="skill">Database Technologies</div>
-
-        <div class="skill">Cybersecurity</div>
-
-        <div class="skill">Web Technologies</div>
-
-    </div>
 
 </section>
 
@@ -479,7 +572,7 @@
         <a
             href="https://www.linkedin.com/in/sivakoti-suguna-4b107241b/"
             target="_blank">
-            LinkedIn Profile
+            linkedin.com/in/sivakoti-suguna-4b107241b
         </a>
     </p>
 
